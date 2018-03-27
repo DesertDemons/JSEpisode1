@@ -18,8 +18,52 @@
 *       pairs() returns []
 ****************************************************************/
 function pairs(names) {
-  // Your code goes here
+	names = names || [];
+	let result = [];
+
+	while(names.length){
+		if(names.length === 1){
+			result.push([names[0]]);
+			break;
+		}
+		result.push([names.getRandom(), names.getRandom()])
+	}
+	return result;
+
+
+
+
+
+
+	// let pairs = []
+
+	// if (!names || names.length === 0) {
+	// 	let names = [];
+	// 	return names;
+	// } else if(names.length === 2){
+	// 	pairs.push([names[0],names[1]]);
+	// 	return pairs;
+
+	// } else if(names.length%2 === 0){
+	// 	for (let i = names.length - 1; i >= 0; i-=2) {
+	// 		pairs.push([ names[i],names[i-1] ]);
+	// 	}
+
+	// 	return pairs;
+	// } else if(names.length%2 !==0){
+	// 	for (let i = 0; i < names.length; i+=2) {
+	// 		if(names.length > i){
+	// 			pairs.push([ names[i], names[i+1] ]);
+	// 		} else {
+	// 			pairs.push([names[i]]);
+	// 			break;
+	// 		}
+	// 	}
+	// 	return pairs;
+	// }
+	
 }
+
 
 export default pairs;
 
